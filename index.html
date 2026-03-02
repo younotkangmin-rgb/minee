@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gacha Game</title>
+</head>
+<body>
+    <h1>Welcome to the Gacha Game!</h1>
+    <p>Spin to get your favorite characters!</p>
+    <button id="spinButton">Spin</button>
+    <div id="result"></div>
+
+    <script>
+        const characters = ['Character 1', 'Character 2', 'Character 3', 'Character 4', 'Character 5'];
+        document.getElementById('spinButton').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * characters.length);
+            document.getElementById('result').innerText = 'You got: ' + characters[randomIndex];
+        });
+    </script>
+</body>
+</html>
